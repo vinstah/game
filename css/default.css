@@ -1,0 +1,134 @@
+body { 
+	background: #6bba70;
+	font-size:1em;
+	margin:0;
+}
+div#header{ 
+	background:#F9E379; 
+	width:100%;
+	background: #a9e4f7; /* Old browsers */
+    background: -moz-linear-gradient(top,  #a9e4f7 0%, #0fb4e7 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a9e4f7), color-stop(100%,#0fb4e7)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #a9e4f7 0%,#0fb4e7 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #a9e4f7 0%,#0fb4e7 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #a9e4f7 0%,#0fb4e7 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #a9e4f7 0%,#0fb4e7 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a9e4f7', endColorstr='#0fb4e7',GradientType=0 ); /* IE6-9 */
+}
+#header h1 { 
+	color:green; 
+ 	font-size:2.5em;
+	text-align:center; 
+	margin:0;
+}
+#header span{ 
+	color:blueviolet;
+	margin:10%; 
+}
+
+/*****main******/
+div#main{
+	border-radius:10px;
+	font-size:1.2em;
+	margin:1em;
+}
+
+/* default.php styles */
+div#tab{
+	border:none;
+	height:520px;
+	width:80%;
+	margin:0 auto;
+}
+/* main page */
+#pics {
+				margin:20px auto;
+				width:60%;			
+			}		
+#pics img:first-child{margin-left: 100px;}
+			
+/*registration*/
+
+#tab h2{ 
+	color:green;
+	font-size:1.2em;
+	margin-top:-15px;
+}
+#tab ul{padding-left:10%;}
+#tab label{
+	font-size:1em;
+}
+#tab label.error{
+	background:lightgrey; 
+	border-top:none;
+	font-size:0.8em;
+	padding-top:2px;
+ 	width:400px;
+ 	position:relative;bottom:50px;
+}
+#tab input{
+	border: 2px solid orange;
+	border-radius: 4px;
+	margin-top:-20px;
+	padding:5px;
+	width:200px;
+	position:relative;bottom:25px;left:200px;
+	
+}
+#tab input.error {
+	border:2px solid red;
+	}
+#tab input[type=submit]{
+    background: #a9e4f7; /* Old browsers */
+    background: -moz-linear-gradient(top,  #a9e4f7 0%, #0fb4e7 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a9e4f7), color-stop(100%,#0fb4e7)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #a9e4f7 0%,#0fb4e7 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #a9e4f7 0%,#0fb4e7 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #a9e4f7 0%,#0fb4e7 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #a9e4f7 0%,#0fb4e7 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a9e4f7', endColorstr='#0fb4e7',GradientType=0 ); /* IE6-9 */
+    border:none;
+    font-size:1.4em;
+    margin-left:30%;
+    width:270px;
+    position:static;
+}
+#tab input[type=submit]:active, #reg input[type=submit]:focus{
+     background: #0fb4e7; /* Old browsers */ #a9e4f7
+    background: -moz-linear-gradient(top,  #0fb4e7 0%, #a9e4f7 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0fb4e7), color-stop(100%,#a9e4f7)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #0fb4e7 0%,#a9e4f7 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #0fb4e7 0%,#a9e4f7 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #0fb4e7 0%,#a9e4f7 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #0fb4e7 0%,#a9e4f7 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0fb4e7', endColorstr='#a9e4f7',GradientType=0 ); /* IE6-9 */
+}
+/* game.php styles ***/
+
+div#game{
+	background:white;	
+	border-radius:4px;
+	height:500px;
+	margin:0 auto;
+	padding-top:3em;	
+	width:80%;
+}
+#game>h2{
+	color:green;
+	font-size:1.2em;
+	margin-top:-15px;
+	}
+#game>#pics{
+	border:1px solid lightgrey;
+	margin-top:3em;	
+}
+/***footer***/
+div#footer{
+	background:#006363; 
+	border-radius:5px 5px 0 0; /*css3 */
+	/* IE STYLE */
+	#position:fixed; 
+	#bottom: 1em;
+	#left:4%;
+	#width:90%;
+}

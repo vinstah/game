@@ -1,0 +1,150 @@
+<!--
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+  
+<script src="http://cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js"></script>  
+  <title>Animal Quiz</title>
+
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+  <!-- on live page use google CDN for scripts 
+
+  <link rel="styleseet" href="css/reset.css" media="screen" />
+
+  <link rel="stylesheet" href="css/grid.css" media="screen" />
+
+  <link rel="stylesheet" href="css/default.css" media="screen" />
+
+
+  <!-- JQuery Online
+
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" media="screen" />
+
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+  <script type="text/javascript" src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+
+  <!--validator --
+
+
+    <script type="text/javascript" src="js/validate.js"></script>
+
+ 
+
+    <!--<script type='text/javascript'   src='http://getfirebug.com/releases/lite/1.2/firebug-lite-compressed.js'><script>--
+
+  <script type="text/javascript" src="js/js.js"></script>
+
+
+<style type="text/css">
+
+.hidden{visibility:hidden;}
+
+</style>
+
+<script>
+
+/*
+
+function flashit()
+
+{
+
+
+var myexample = document.getElementById('reg');
+
+if (myexample.style.borderColor=="blue") 
+
+myexample.style.borderColor="green" ;
+
+else 
+
+myexample.style.borderColor="blue" ;
+
+
+
+} 
+
+setInterval('flashit()', 500) ;
+
+
+*/
+
+</script>
+
+</head>
+
+<body>
+
+
+
+    <div id="header" class="grid_12">
+
+        <h1>Animals Quiz</h1>
+
+        <span>What things do you know about animals?</span>
+
+    </div>
+
+    
+
+        <div class="container_12" style="margin-top:0;">
+
+        
+
+    <div id="main" class="grid_12">
+
+        <div style="text-align:center;margin-left:5%;width:90%;" ><a href="#" class="click">click me</a>
+
+            <marquee id="scroll" class="hidden">I'll go this way &lt; ---</marquee>
+
+        </div>
+-->
+        <div id="about" class="grid_5 ">
+
+        <p> Test your knowledge of animals in this fun and addicting quiz<br /> test your score against your freinds </p>
+<script>$(function(e) {
+ e.preventDefault();
+    // if the function argument is given to overlay,
+    // it is assumed to be the onBeforeLoad event listener
+    $("a[rel]").overlay({
+ 
+        mask: 'Darkred',
+        effect: 'apple',
+ 
+        onBeforeLoad: function() {
+ 
+            // grab wrapper element inside content
+            var wrap = this.getOverlay().find(".contentWrap");
+ 
+            // load the page specified in the trigger
+            wrap.load(this.getTrigger().attr("href"));
+        }
+ 
+    });
+});</script>
+
+<a href="game.html" rel="#overlay" style="text-decoration:none">
+  <!-- remember that you can use any element inside the trigger -->
+  <button type="button">Show external page in overlay</button>
+</a>
+ 
+<!-- another link. uses the same overlay -->
+<a href="external-content2.htm" rel="#overlay" style="text-decoration:none">
+  <button type="button">Show another page</button>
+</a>
+ 
+<!-- overlayed element -->
+<div class="apple_overlay" id="overlay">
+  <!-- the external content is loaded inside this tag -->
+  <div class="contentWrap"></div>
+</div>
+
+
+ 
+
+<script src="http://loadus.exelator.com/load/?p=390&g=001&ctg=quizzes&subctg=&kw=&refkw=&gd=" type="text/javascript"></script>
