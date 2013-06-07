@@ -4,10 +4,11 @@
 * this page is accessed by the forms on the main page of the site.
 * It checks for all the input boxes and that they are filled out using functions and regExps
 */
-
+include_once("../model/registration.php");
 class register {
 	// check for $_POST array.
 	public function __construct(){
+		
 		session_start();
 		/* use the construct function to check for $_POST data from default.php(main page) */
 		if($_SERVER['REQUEST_METHOD']== 'POST' && stristr($_SERVER['HTTP_REFERER'] ,'default.php') ){
@@ -25,6 +26,7 @@ class register {
 	}	// End of construct
 	
 	public function regSchool(){
+		$regModel = new regModel();
 			// list expected fields
 			$expected = array( 'clName','schName', 'email', 'address', 'city', 'phone');
 			// set required fields
@@ -54,7 +56,7 @@ class register {
 				}else{// all fields are ok //send user to players registration
 				//send query to model
 				$_SESSION['schooldone'] = "Thank you. your class $clName is now registered" ;				
-				header('Location: ../default.php#reg');
+				//header('Location: ../default.php#reg');
 				}
 			
 			
@@ -64,6 +66,8 @@ class register {
 		}//end function regSchool
 		
 		public function regPlayer(){
+			//use the model
+			$regModel = new regModel();
 		// list expected fields
 		$expected = array( 'username','password','password2', 'clName');
 		// set required fields
@@ -92,6 +96,12 @@ class register {
 			}//end foreach $_POST
 			
 			//start doing validation for player registration
+			
+			//username already in DB
+			if($regModel->check_user($username)){
+				$errors['username'] = " already exists";
+				
+				}
 			// passwords match
 			if($password !== $password2){
 				$errors['password2'] = 'does not match';
@@ -104,12 +114,13 @@ class register {
 				} elseif(!empty($errors)){
 					echo '<p class="warning">Please fix the item(s) indicated.</p>';
 					foreach($errors as $k => $v){
-					echo "your $k $v please go back and fix";				
+					echo "your $k $v please click "
+					.'<a href="javascript:history.go(-1)">click here</a> to go back and fix';				
 						}
 				 }elseif(empty($errors) && empty($missing)){
 					$_SESSION['username'] = $username;
 					
-						header('Location: ../game.php')	;
+					//	header('Location: ../game.php')	;
 					}
 			
 			}//End of player registration

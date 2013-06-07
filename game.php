@@ -1,6 +1,4 @@
 <?php 
-header('Location: gba/index.html');
-exit();
 session_start();
 	isset($_SESSION['username'])? $username =  $_SESSION['username'] : header('Location:default.php');
 unset($_SESSION['username']);
